@@ -1,0 +1,20 @@
+name: Email Step Workflow
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:  # Allows you to manually run it from the GitHub UI
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # This is the step containing your required email address
+      - name: 23f2003227@ds.study.iitm.ac.in
+        run: echo "Hello, world! This step contains the required email."
+
+      - name: Final confirmation
+        run: echo "Workflow completed successfully."
